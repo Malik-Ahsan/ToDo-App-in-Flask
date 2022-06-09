@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<link rel = "stylesheet" href = "{{url_for('static',filename= 'css/main.css')}}">
+</head>
+<body>
+<center><h1>ToDo List</h1></center>
+<form method='post'>
+	<div class="details">
+		<label for = "title"><b>Title</b></label><br>
+		<input type='text' name='title'size="150" id = "title"><br><br>
+		<label for = "description"><b>Description</b></label><br>
+		<input type='text' name='description'size="150" id = "description"><br><br>
+	</div>
+	<div class = "button">
+		<button type='submit' formaction="/list" id = "b1">Add</button>
+		<button type="submit" formaction="/showList" name="Show records" id="b2">Show All Records</button><br><br>
+		<b>{{ msg }}<b>
+	</div>
+</form>
+
+</body>
+</html>

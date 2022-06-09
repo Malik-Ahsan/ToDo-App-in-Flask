@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+.t{
+    padding: 20px;
+}
+</style>
+</head>
+<body>
+<div class = "t">
+<h1>All ToDo List Tasks</h1>
+    <table>
+         <thead>
+            <tr>
+               <th>Sr</th>
+               <th>Title</th>
+               <th>Description</th>
+            </tr>
+         </thead>
+
+         <tbody>
+            {% for list in lists %}
+               <tr>
+                  <td>{{ list.id }}</td>
+                  <td>{{ list.title }}</td>
+                  <td>{{ list.description }}</td>
+               </tr>
+            {% endfor %}
+         </tbody>
+      </table>
+</div>
+</body>
+</html>
